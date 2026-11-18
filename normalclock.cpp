@@ -12,9 +12,8 @@ int main(){
 
 	while(1){ //waits for the second to change for the first time
 		time_t t = time(0);
-		tm* now = localtime(&t);
-		int currentSecond = now->tm_sec;	
-		if(initialSecond != currentSecond) break;	
+		tm* now = localtime(&t);	
+		if(initialSecond != now->tm_sec) break;	
 	}
 
 	while(1){
